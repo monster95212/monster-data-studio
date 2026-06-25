@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-25
+
+### CloudBase Deployment Fix
+
+- Fixed the CloudBase deployment failure caused by production startup loading `next.config.ts` without TypeScript available.
+- Replaced `next.config.ts` with `next.config.mjs` while preserving the existing Next.js `output: "standalone"` configuration.
+- Added a project `Dockerfile` so Tencent CloudBase uses the repository Dockerfile instead of an auto-generated Dockerfile.
+- Updated the production start script to listen on `0.0.0.0:3000`.
+- Tencent CloudBase deployment should set Dockerfile: 有.
+
 ## 2026-06-23
 
 ### Deployment Preparation
